@@ -78,8 +78,8 @@ Follow these steps to set up the project:
    define('CONSUMER_SECRET', 'your_consumer_secret_here');
    
    // Business Details
-   define('BUSINESS_SHORT_CODE', '123456'); // Your Paybill/Till number
-   define('PASSKEY', 'your_passkey_here');
+   define('BUSINESS_SHORT_CODE', '123456'); // Your Business short code
+   define('PASSKEY', 'your_passkey_here'); 
    define('ACCOUNT_NUMBER', 'YOUR_ACCOUNT_REF');
    
    // Database Configuration
@@ -155,32 +155,6 @@ Test amount: 1 KSH
    ```php
    define('AUTH_URL', 'https://api.safaricom.co.ke/oauth/v1/generate');
    define('STK_PUSH_URL', 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest');
-   ```
-
-2. Configure HTTPS:
-   ```nginx
-   server {
-       listen 443 ssl;
-       server_name yourdomain.com;
-       ssl_certificate /etc/ssl/yourdomain.crt;
-       ssl_certificate_key /etc/ssl/yourdomain.key;
-       root /var/www/mpesa-payment;
-       index index.php;
-       
-       location / {
-           try_files $uri $uri/ /index.php?$query_string;
-       }
-       
-       location ~ \.php$ {
-           include snippets/fastcgi-php.conf;
-           fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
-       }
-   }
-   ```
-
-3. Set up cron job for reconciliation:
-   ```bash
-   * * * * * php /var/www/mpesa-payment/cron/reconcile.php >> /var/log/mpesa_reconciliation.log
    ```
 
 ## API Reference
