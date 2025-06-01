@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Pesa Payment</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Make a Payment</h1>
+        <p>Enter your phone number to pay 1 KSH</p>
+        
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="phone">Phone Number (with country code):</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 254712345678" required>
+                <small>Format: 2547XXXXXXXX</small>
+            </div>
+            
+            <button type="submit" id="payButton">Pay 1 KSH</button>
+        </form>
+        
+        <div id="responseMessage"></div>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
