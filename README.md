@@ -1,6 +1,5 @@
 # M-Pesa Payment Integration Web Application
 
-![M-Pesa Logo](https://www.safaricom.co.ke/images/M-PESA-Logo.png)
 
 A complete solution for integrating M-Pesa payments into web applications using PHP and JavaScript. This project enables users to make payments by entering their phone number with country code.
 
